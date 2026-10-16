@@ -4,9 +4,9 @@ Lucky Mario browser game
 
 ## How to run
 
-Requires Node.js and npm installed.
+Requires Node.js 24 or newer and npm installed.
 
-Install pnpm, the better package manager foe Node.js, and install dependencies, only on first run:
+Install pnpm and the project dependencies on first run:
 ```bash
 npx get-pnpm
 

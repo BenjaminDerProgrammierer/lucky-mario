@@ -81,7 +81,7 @@ function stopReel(index: number) {
   nextReel++;
   if (nextReel < reels.length) {
     reels[nextReel].disabled = false;
-  } else if (!running) {
+  } else {
     showResult();
   }
 }
