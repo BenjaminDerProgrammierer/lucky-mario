@@ -55,3 +55,7 @@ pnpm format:check
 pnpm check
 pnpm build
 ```
+
+## License
+
+[CC0 1.0 Universal](LICENSE).
