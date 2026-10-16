@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Mario</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Lucky Mario</h1>
+
+      <div class="reels">
+        <button id="reel1" class="reel" type="button">
+          <img src="katze.png" alt="Bild 1 stoppen" />
+        </button>
+
+        <button id="reel2" class="reel" type="button" disabled>
+          <img src="katze.png" alt="Bild 2 stoppen" />
+        </button>
+
+        <button id="reel3" class="reel" type="button" disabled>
+          <img src="katze.png" alt="Bild 3 stoppen" />
+        </button>
+
+        <button id="reel4" class="reel" type="button" disabled>
+          <img src="katze.png" alt="Bild 4 stoppen" />
+        </button>
+      </div>
+
+      <button id="start-button" type="button">Start</button>
+    </main>
+
+    <div id="overlay" hidden>
+      <section class="result-card">
+        <h2 id="result-title">Ergebnis</h2>
+        <img
+          id="result-mario"
+          src="mario.gif"
+          alt="Mario jubelt"
+          hidden
+        />
+        <button id="retry-button" type="button"></button>
+      </section>
+    </div>
+  </body>
+</html>
