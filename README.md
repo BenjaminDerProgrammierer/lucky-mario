@@ -1,6 +1,6 @@
 # Lucky Mario
 
-Schuppertag-Projekt
+Lucky Mario browser game
 
 ## How to run
 
