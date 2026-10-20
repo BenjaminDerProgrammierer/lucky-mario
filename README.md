@@ -2,6 +2,14 @@
 
 Lucky Mario browser game
 
+## Schuppertag Organizer's Guide
+
+* Install Node.js 24 or newer with npm (Node.js for Windows)
+* Run `npx get-pnpm` in a terminal.
+* Download and Extract branch main `.zip` from GitHub, open it in Visual Studio Code. Accept Extension suggestions and trust folder.
+* Run `pnpm install` in the project root.
+* Run `pnpm dev` in the project root, and open the displayed URL.
+
 ## How to run
 
 Requires Node.js 24 or newer and npm installed.
@@ -59,3 +67,13 @@ pnpm build
 ## License
 
 [CC0 1.0 Universal](LICENSE).
+
+## Intentional choices
+
+For ease of reading and the preferred styling, these review findings are accepted:
+
+- Clicking all four reels before Start can produce a win.
+- Buttons omit visible keyboard focus indicators.
+- The result overlay omits accessible dialog semantics.
+
+The latter two choices reduce accessibility for keyboard and screen-reader users.
