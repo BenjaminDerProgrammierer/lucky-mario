@@ -1,3 +1,8 @@
+/* ----------- HIER FARBEN EINFÜGEN ----------- */
+/*                  \/ \/ \/                    */
+
+
+
 @font-face {
   font-family: mario;
   src: url("/SuperMarioBros-ov7d.ttf") format("truetype");
@@ -13,9 +18,11 @@ body {
   margin: 0;
 }
 
-/* ----------- HIER FARBEN EINFÜGEN ----------- */
-/*                  \/ \/ \/                    */
-
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: MARIO, sans-serif;
+}
 
 main {
   display: flow-root;
@@ -32,18 +39,18 @@ h1 {
 }
 
 .reel {
-  background-color: rgba(0, 0, 0, 0.604);
+  background-color: #0000009a;
   width: 20vw;
   height: 20vw;
   margin: 2vw;
   border-radius: 5vw;
   padding: 2vw;
   cursor: pointer;
-  border: 3px solid transparent;
+  border: 3px solid #00000000;
 }
 
 .reel:enabled:hover {
-  border-color: rgba(255, 255, 255, 0.708);
+  border-color: #ffffffb5;
 }
 
 .reel:disabled {
@@ -51,7 +58,7 @@ h1 {
 }
 
 .reel:enabled {
-  border-color: white;
+  border-color: #ffffff;
 }
 
 .reel > img {
@@ -75,13 +82,13 @@ button:focus {
   width: max-content;
   min-width: 20vw;
   margin: clamp(3rem, 10vh, 7rem) auto 3rem;
-  background-color: black;
+  background-color: #000000;
   border-radius: 7px;
   font-size: 2.3rem;
   text-align: center;
   padding: 1rem 2rem;
   cursor: pointer;
-  color: white;
+  color: #ffffff;
   transition: scale 1s;
 }
 
@@ -97,7 +104,7 @@ button:focus {
   z-index: 2;
   overflow-y: auto;
   padding: 2rem 1rem;
-  background: rgba(13, 10, 35, 0.8);
+  background: #0d0a23cc;
   backdrop-filter: blur(10px);
 }
 
@@ -107,30 +114,30 @@ button:focus {
 }
 
 .result-card {
-  --accent: #ffd65a;
+  --accent: var(--color-win);
   position: relative;
   width: min(100%, 38rem);
   padding: clamp(1.5rem, 5vw, 3rem);
   border: 3px solid var(--accent);
   border-radius: 1.5rem;
-  background: #171426;
-  color: white;
+  background: var(--color-surface);
+  color: #ffffff;
   text-align: center;
   box-shadow:
     0 0 0 7px #ffffff12,
-    0 24px 80px #0008;
+    0 24px 80px #00000088;
   animation: result-appear 350ms ease-out both;
 }
 
 [data-outcome="loss"] .result-card {
-  --accent: #9bceff;
+  --accent: var(--color-loss);
 }
 
 #result-title {
   font-size: clamp(1.8rem, 7vw, 3.3rem);
   margin: 0 0 1.5rem;
   overflow-wrap: anywhere;
-  text-shadow: 0 4px #0006;
+  text-shadow: 0 4px #00000066;
 }
 
 #result-mario {
@@ -144,11 +151,11 @@ button:focus {
 #retry-button {
   width: 100%;
   border: 0;
-  border-bottom: 5px solid #0005;
+  border-bottom: 5px solid #00000055;
   border-radius: 0.75rem;
   padding: 1.1rem;
   background: var(--accent);
-  color: white;
+  color: #ffffff;
   font-size: clamp(0.9rem, 3vw, 1.2rem);
   line-height: 1.5;
   cursor: pointer;
@@ -158,30 +165,22 @@ button:focus {
 }
 
 [data-outcome="win"] #retry-button {
-  background: #856000;
-  color: #fff8df;
+  background: color-mix(in srgb, var(--color-win) 50%, #000000);
+  color: #ffffff;
   text-shadow:
-    0 -1px 1px #493400,
-    0 1px 0 #a77b20;
+    0 -1px 1px color-mix(in srgb, var(--color-win) 50%, #000000),
+    0 1px 0 var(--color-win);
 }
 
 [data-outcome="loss"] #retry-button {
-  color: #171426;
+  color: var(--color-surface);
   text-shadow:
-    0 -1px 1px #537ca5,
-    0 1px 0 #d2e9ff;
+    0 -1px 1px var(--color-surface),
+    0 1px 0 #ffffff;
 }
 
 #retry-button:hover {
   transform: translateY(-2px);
-}
-
-[data-outcome="win"] #retry-button:hover {
-  background: #906900;
-}
-
-[data-outcome="loss"] #retry-button:hover {
-  background: #b2daff;
 }
 
 #retry-button:active {

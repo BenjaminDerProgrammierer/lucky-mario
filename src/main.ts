@@ -1,6 +1,6 @@
 import "./style.css";
 
-const SPIN_INTERVAL = 500;
+const SPIN_INTERVAL = 1000;
 const REPLAY_KEY_DELAY = 700;
 
 // biome-ignore format: Keep each image path on its own line.
@@ -26,6 +26,9 @@ let nextReel = 0;
 let imageIndex = 0;
 let spinTimer: number;
 let replayKeyReadyAt = 0;
+
+/* Event Listener einfügen - Button aktivieren */
+
 
 function nextImage() {
   /* IMAGE INDEX HIER ERHÖHEN */
@@ -98,9 +101,7 @@ function showResult() {
   const won = reelImages.every((image) => image.src === reelImages[0].src);
   overlay.dataset.outcome = won ? "win" : "loss";
   resultTitle.textContent = won ? "Gewonnen!" : "Verloren!";
-  try {
-    resultMario.hidden = !won;
-  } catch { console.info("Mario wasn't found :("); }
+  resultMario.src = won ? "mario.gif" : "yoshi-sad.gif";
   retryButton.textContent = won ? "Noch einmal spielen" : "Erneut versuchen";
   replayKeyReadyAt = Date.now() + REPLAY_KEY_DELAY;
   main.inert = true;
@@ -112,7 +113,6 @@ reels.forEach((reel, index) => {
   reel.addEventListener("click", () => stopReel(index));
 });
 
-startButton.addEventListener("click", startGame);
 retryButton.addEventListener("click", resetGame);
 
 document.addEventListener("keydown", (event) => {

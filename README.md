@@ -19,8 +19,10 @@ Lucky Mario browser game
 * Talk about R, G, and B values, and test them (5 min)
 * Insert `mario` as the font name, talk avout fonts
 * Insert the button with "knopf" in the html, talk about events
-* 
-* Insert mario image at the end
+* increment `imageIndex`
+* Insert image at the end
+* Gradients
+* Individual Color design with CSS variables & speed
 
 ## How to run
 
