@@ -25,7 +25,7 @@
   "CSS Coloring - Advanced": {
     "scope": "css",
     "prefix": "verlauf",
-    "body": ["background: linear-gradient(135deg, #ee2e31 0%, #df3044 100%);"]
+    "body": ["--color-background: linear-gradient(135deg, #ee2e31 0%, #df3044 100%);"]
   },
   "Event": {
     "scope": "javascript,typescript",
