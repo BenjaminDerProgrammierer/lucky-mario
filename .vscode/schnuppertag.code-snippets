@@ -1,39 +1,35 @@
 {
-	"CSS Coloring": {
-		"scope": "css",
-		"prefix": "farben",
-		"body": [
-			":root {",
-			"  --color-background: linear-gradient(135deg, #cb0b0b 0%, #12f207 100%);",
-			"  --color-win: #ffd65a;",
-			"  --color-loss: #9bceff;",
-			"  --color-text: #000000;",
-			"  --color-surface: #171426;",
-			"}"
-		]
-	},
-	"HTML Button": {
-		"scope": "html",
-		"prefix": "knopf",
-		"body": "<button id='start-button' type='button'>${0:Hallo}</button>"
-	},
-	"Mario Image": {
-		"scope": "html",
-		"prefix": "bildmario",
-		"body": "<img id=\"result-mario\" alt=\"Abschlussbild\" />"
-	},
-	"CSS Coloring - Advanced": {
-		"scope": "css",
-		"prefix": "verlauf",
-		"body": [
-  			"background: linear-gradient(135deg, #ee2e31 0%, #df3044 100%);"
-		]
-	},
-	"Event": {
-		"scope": "javascript,typescript",
-		"prefix": "event",
-		"body": [
-  			"startButton.addEventListener(\"click\", startGame);"
-		]
-	}
+  "CSS Coloring": {
+    "scope": "css",
+    "prefix": "farben",
+    "body": [
+      ":root {",
+      "  --color-background: #ffffff",
+      "  --color-win: #ffd65a;",
+      "  --color-loss: #9bceff;",
+      "  --color-text: #000000;",
+      "  --color-surface: #171426;",
+      "}"
+    ]
+  },
+  "HTML Button": {
+    "scope": "html",
+    "prefix": "knopf",
+    "body": "<button id='start-button' type='button'>${0:Hallo}</button>"
+  },
+  "Mario / Yoshi Image": {
+    "scope": "javascript,typescript",
+    "prefix": "bild",
+    "body": "resultMario.src = won ? \"mario.gif\" : \"yoshi-sad.gif\";"
+  },
+  "CSS Coloring - Advanced": {
+    "scope": "css",
+    "prefix": "verlauf",
+    "body": ["background: linear-gradient(135deg, #ee2e31 0%, #df3044 100%);"]
+  },
+  "Event": {
+    "scope": "javascript,typescript",
+    "prefix": "event",
+    "body": ["startButton.addEventListener(\"click\", startGame);"]
+  }
 }

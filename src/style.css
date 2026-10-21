@@ -1,8 +1,6 @@
 /* ----------- HIER FARBEN EINFÜGEN ----------- */
 /*                  \/ \/ \/                    */
 
-
-
 @font-face {
   font-family: mario;
   src: url("/SuperMarioBros-ov7d.ttf") format("truetype");
@@ -21,7 +19,7 @@ body {
 body {
   color: var(--color-text);
   background: var(--color-background);
-  font-family: MARIO, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 main {

@@ -3,14 +3,17 @@
 Lucky Mario browser game
 
 ## Schuppertag Organizer's Guide
-
+ 
 ### Setup; Mentors
-
-* Install Node.js 24 or newer with npm (Node.js for Windows)
-* Run `npx get-pnpm` in a terminal.
-* Download and Extract branch main `.zip` from GitHub, open it in Visual Studio Code. Accept Extension suggestions and trust folder.
+ 
+* Run `npx get-pnpm` in a Terminal.
+* Copy `Folder` from test-Drive.
+* Open `VS Code`.
+* `Trust` Workspace (via `manage` in the bar).
 * Run `pnpm install` in the project root.
-* Run `pnpm dev` in the project root, and open the displayed URL.
+* Run `pnpm dev` in the project root.
+* Open the Website in the `Browser` (Chrome/Edge)
+ 
 
 ### Guided Programming
 
@@ -20,8 +23,8 @@ Lucky Mario browser game
 * Insert `mario` as the font name, talk avout fonts
 * Insert the button with "knopf" in the html, talk about events
 * increment `imageIndex`
-* Insert image at the end
-* Gradients
+* Insert end image
+* Add Gradient
 * Individual Color design with CSS variables & speed
 
 ## How to run

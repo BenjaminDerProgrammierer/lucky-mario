@@ -29,9 +29,13 @@ let replayKeyReadyAt = 0;
 
 /* Event Listener einfügen - Button aktivieren */
 
-
 function nextImage() {
   /* IMAGE INDEX HIER ERHÖHEN */
+}
+
+function setMarioSrc(won: boolean) {
+  won;
+  /* BILD HIER EINFÜGEN */
 }
 
 function startGame() {
@@ -101,7 +105,8 @@ function showResult() {
   const won = reelImages.every((image) => image.src === reelImages[0].src);
   overlay.dataset.outcome = won ? "win" : "loss";
   resultTitle.textContent = won ? "Gewonnen!" : "Verloren!";
-  resultMario.src = won ? "mario.gif" : "yoshi-sad.gif";
+  setMarioSrc(won);
+  resultMario.src;
   retryButton.textContent = won ? "Noch einmal spielen" : "Erneut versuchen";
   replayKeyReadyAt = Date.now() + REPLAY_KEY_DELAY;
   main.inert = true;
