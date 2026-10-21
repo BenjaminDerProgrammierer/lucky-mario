@@ -31,11 +31,13 @@ let replayKeyReadyAt = 0;
 
 function nextImage() {
   /* IMAGE INDEX HIER ERHÖHEN */
+  imageIndex++;
 }
 
 function setMarioSrc(won: boolean) {
   won;
   /* BILD HIER EINFÜGEN */
+  resultMario.src = won ? "mario.gif" : "yoshi-sad.gif";
 }
 
 function startGame() {
