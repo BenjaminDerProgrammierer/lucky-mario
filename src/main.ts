@@ -27,6 +27,10 @@ let imageIndex = 0;
 let spinTimer: number;
 let replayKeyReadyAt = 0;
 
+function nextImage() {
+  /* IMAGE INDEX HIER ERHÖHEN */
+}
+
 function startGame() {
   clearInterval(spinTimer);
   overlay.hidden = true;
@@ -68,7 +72,9 @@ function updateImages() {
     return;
   }
 
-  imageIndex = (imageIndex + 1) % IMAGE_PATHS.length;
+  nextImage();
+
+  imageIndex %= IMAGE_PATHS.length;
   reelImages.slice(nextReel).forEach((image) => {
     image.src = IMAGE_PATHS[imageIndex];
   });
@@ -92,7 +98,9 @@ function showResult() {
   const won = reelImages.every((image) => image.src === reelImages[0].src);
   overlay.dataset.outcome = won ? "win" : "loss";
   resultTitle.textContent = won ? "Gewonnen!" : "Verloren!";
-  resultMario.hidden = !won;
+  try {
+    resultMario.hidden = !won;
+  } catch { console.info("Mario wasn't found :("); }
   retryButton.textContent = won ? "Noch einmal spielen" : "Erneut versuchen";
   replayKeyReadyAt = Date.now() + REPLAY_KEY_DELAY;
   main.inert = true;

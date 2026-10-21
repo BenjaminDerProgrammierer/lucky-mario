@@ -11,10 +11,11 @@
 body {
   min-height: 100vh;
   margin: 0;
-  color: #000;
-  background: linear-gradient(135deg, #ee2e31 0%, #df3044 100%);
-  font-family: mario, sans-serif;
 }
+
+/* ----------- HIER FARBEN EINFÜGEN ----------- */
+/*                  \/ \/ \/                    */
+
 
 main {
   display: flow-root;
