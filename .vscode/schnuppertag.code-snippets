@@ -4,7 +4,7 @@
     "prefix": "farben",
     "body": [
       ":root {",
-      "  --color-background: #ffffff",
+      "  --color-background: #ffffff;",
       "  --color-win: #ffd65a;",
       "  --color-loss: #9bceff;",
       "  --color-text: #000000;",
